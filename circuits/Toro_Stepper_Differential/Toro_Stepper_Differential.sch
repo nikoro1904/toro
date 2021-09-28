@@ -14,10 +14,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L MCU_Module:Arduino_Nano_v3.x A?
+L MCU_Module:Arduino_Nano_v3.x A1
 U 1 1 60E9D74E
 P 8450 3400
-F 0 "A?" H 8450 2311 50  0000 C CNN
+F 0 "A1" H 8450 2311 50  0000 C CNN
 F 1 "Arduino_Nano_v3.x" H 8450 2220 50  0000 C CNN
 F 2 "Module:Arduino_Nano" H 8450 3400 50  0001 C CIN
 F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 8450 3400 50  0001 C CNN
@@ -25,47 +25,25 @@ F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 8450 3400 50
 	1    0    0    -1  
 $EndComp
 $Comp
-L Driver_Motor:L293 U?
+L Driver_Motor:L293 U1
 U 1 1 60EA028E
 P 5600 2600
-F 0 "U?" H 5600 3781 50  0000 C CNN
+F 0 "U1" H 5600 3781 50  0000 C CNN
 F 1 "L293" H 5600 3690 50  0000 C CNN
-F 2 "Package_DIP:DIP-16_W7.62mm" H 5850 1850 50  0001 L CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_LongPads" H 5850 1850 50  0001 L CNN
 F 3 "http://www.ti.com/lit/ds/symlink/l293.pdf" H 5300 3300 50  0001 C CNN
 	1    5600 2600
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Driver_Motor:L293 U?
+L Driver_Motor:L293 U2
 U 1 1 60EA0A8A
 P 5600 4750
-F 0 "U?" H 5600 5931 50  0000 C CNN
+F 0 "U2" H 5600 5931 50  0000 C CNN
 F 1 "L293" H 5600 5840 50  0000 C CNN
-F 2 "Package_DIP:DIP-16_W7.62mm" H 5850 4000 50  0001 L CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_LongPads" H 5850 4000 50  0001 L CNN
 F 3 "http://www.ti.com/lit/ds/symlink/l293.pdf" H 5300 5450 50  0001 C CNN
 	1    5600 4750
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Motor:Stepper_Motor_bipolar M?
-U 1 1 60EA173C
-P 2200 2700
-F 0 "M?" H 2388 2824 50  0000 L CNN
-F 1 "Stepper_Motor_bipolar" H 2388 2733 50  0000 L CNN
-F 2 "" H 2210 2690 50  0001 C CNN
-F 3 "http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0" H 2210 2690 50  0001 C CNN
-	1    2200 2700
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Motor:Stepper_Motor_bipolar M?
-U 1 1 60EA25F0
-P 2150 4850
-F 0 "M?" H 2338 4974 50  0000 L CNN
-F 1 "Stepper_Motor_bipolar" H 2338 4883 50  0000 L CNN
-F 2 "" H 2160 4840 50  0001 C CNN
-F 3 "http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0" H 2160 4840 50  0001 C CNN
-	1    2150 4850
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
@@ -139,10 +117,10 @@ Connection ~ 7400 4550
 Wire Wire Line
 	7400 4550 7400 3900
 $Comp
-L power:GND #PWR?
+L power:GND #PWR03
 U 1 1 60EBA1ED
 P 4800 3550
-F 0 "#PWR?" H 4800 3300 50  0001 C CNN
+F 0 "#PWR03" H 4800 3300 50  0001 C CNN
 F 1 "GND" H 4805 3377 50  0000 C CNN
 F 2 "" H 4800 3550 50  0001 C CNN
 F 3 "" H 4800 3550 50  0001 C CNN
@@ -150,10 +128,10 @@ F 3 "" H 4800 3550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR04
 U 1 1 60EBC3F2
 P 4800 5700
-F 0 "#PWR?" H 4800 5450 50  0001 C CNN
+F 0 "#PWR04" H 4800 5450 50  0001 C CNN
 F 1 "GND" H 4805 5527 50  0000 C CNN
 F 2 "" H 4800 5700 50  0001 C CNN
 F 3 "" H 4800 5700 50  0001 C CNN
@@ -161,10 +139,10 @@ F 3 "" H 4800 5700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR05
 U 1 1 60EBD422
 P 9150 4600
-F 0 "#PWR?" H 9150 4350 50  0001 C CNN
+F 0 "#PWR05" H 9150 4350 50  0001 C CNN
 F 1 "GND" H 9155 4427 50  0000 C CNN
 F 2 "" H 9150 4600 50  0001 C CNN
 F 3 "" H 9150 4600 50  0001 C CNN
@@ -186,30 +164,6 @@ Wire Wire Line
 Wire Wire Line
 	5400 3550 5400 3400
 Wire Wire Line
-	2300 2400 2300 2200
-Wire Wire Line
-	2300 2200 5100 2200
-Wire Wire Line
-	5100 2000 2100 2000
-Wire Wire Line
-	2100 2000 2100 2400
-Wire Wire Line
-	5100 4950 2450 4950
-Wire Wire Line
-	2450 4750 5100 4750
-Wire Wire Line
-	5100 4350 2250 4350
-Wire Wire Line
-	2250 4350 2250 4550
-Wire Wire Line
-	2050 4150 5100 4150
-Wire Wire Line
-	2050 4150 2050 4550
-Wire Wire Line
-	2500 2600 5100 2600
-Wire Wire Line
-	2500 2800 5100 2800
-Wire Wire Line
 	5700 1600 6650 1600
 Wire Wire Line
 	8650 1600 8650 2400
@@ -221,10 +175,10 @@ Connection ~ 6650 1600
 Wire Wire Line
 	6650 1600 8650 1600
 $Comp
-L power:+10V #PWR?
+L power:+10V #PWR01
 U 1 1 60ED92E4
 P 4450 3800
-F 0 "#PWR?" H 4450 3650 50  0001 C CNN
+F 0 "#PWR01" H 4450 3650 50  0001 C CNN
 F 1 "+10V" H 4465 3973 50  0000 C CNN
 F 2 "" H 4450 3800 50  0001 C CNN
 F 3 "" H 4450 3800 50  0001 C CNN
@@ -232,10 +186,10 @@ F 3 "" H 4450 3800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+10V #PWR?
+L power:+10V #PWR02
 U 1 1 60EDAE62
 P 4500 1450
-F 0 "#PWR?" H 4500 1300 50  0001 C CNN
+F 0 "#PWR02" H 4500 1300 50  0001 C CNN
 F 1 "+10V" H 4515 1623 50  0000 C CNN
 F 2 "" H 4500 1450 50  0001 C CNN
 F 3 "" H 4500 1450 50  0001 C CNN
@@ -254,4 +208,176 @@ Wire Wire Line
 	5050 3900 4450 3900
 Wire Wire Line
 	4450 3900 4450 3800
+$Comp
+L Connector:Screw_Terminal_01x03 J1
+U 1 1 6134CE6A
+P 3100 3000
+F 0 "J1" H 3180 3042 50  0000 L CNN
+F 1 "Screw_Terminal_01x03" H 3180 2951 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_Altech_AK300-3_P5.00mm" H 3100 3000 50  0001 C CNN
+F 3 "~" H 3100 3000 50  0001 C CNN
+	1    3100 3000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J2
+U 1 1 6134E460
+P 3100 3550
+F 0 "J2" H 3018 3225 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 3018 3316 50  0000 C CNN
+F 2 "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm" H 3100 3550 50  0001 C CNN
+F 3 "~" H 3100 3550 50  0001 C CNN
+	1    3100 3550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x03 J3
+U 1 1 6134EA41
+P 3100 3950
+F 0 "J3" H 3180 3992 50  0000 L CNN
+F 1 "Screw_Terminal_01x03" H 3180 3901 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_Altech_AK300-3_P5.00mm" H 3100 3950 50  0001 C CNN
+F 3 "~" H 3100 3950 50  0001 C CNN
+	1    3100 3950
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 4750 4000 4750
+Wire Wire Line
+	4000 4750 4000 3950
+Wire Wire Line
+	4000 3950 3300 3950
+Wire Wire Line
+	5100 4150 4300 4150
+Wire Wire Line
+	4300 4150 4300 3550
+Wire Wire Line
+	4300 3550 3300 3550
+Wire Wire Line
+	5100 2800 4300 2800
+Wire Wire Line
+	4300 2800 4300 3450
+Wire Wire Line
+	5100 2600 4150 2600
+Wire Wire Line
+	4150 2600 4150 3100
+Wire Wire Line
+	4150 3100 3300 3100
+Wire Wire Line
+	5100 2200 4000 2200
+Wire Wire Line
+	4000 2200 4000 3000
+Wire Wire Line
+	4000 3000 3300 3000
+Wire Wire Line
+	5100 2000 3850 2000
+Wire Wire Line
+	3850 2000 3850 2900
+Wire Wire Line
+	3850 2900 3300 2900
+Wire Wire Line
+	4100 4350 4100 3850
+Wire Wire Line
+	4100 4350 5100 4350
+Wire Wire Line
+	4100 3850 3300 3850
+Wire Wire Line
+	5100 4950 3900 4950
+Wire Wire Line
+	3900 4950 3900 4050
+Wire Wire Line
+	3900 4050 3300 4050
+$Comp
+L Connector:Screw_Terminal_01x02 J4
+U 1 1 61384FD7
+P 2900 1150
+F 0 "J4" V 2864 962 50  0000 R CNN
+F 1 "Screw_Terminal_01x02" V 2773 962 50  0000 R CNN
+F 2 "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm" H 2900 1150 50  0001 C CNN
+F 3 "~" H 2900 1150 50  0001 C CNN
+	1    2900 1150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+10V #PWR06
+U 1 1 6138B4E0
+P 2500 1550
+F 0 "#PWR06" H 2500 1400 50  0001 C CNN
+F 1 "+10V" V 2515 1678 50  0000 L CNN
+F 2 "" H 2500 1550 50  0001 C CNN
+F 3 "" H 2500 1550 50  0001 C CNN
+	1    2500 1550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 6138DB78
+P 3000 1750
+F 0 "#PWR07" H 3000 1500 50  0001 C CNN
+F 1 "GND" H 3005 1577 50  0000 C CNN
+F 2 "" H 3000 1750 50  0001 C CNN
+F 3 "" H 3000 1750 50  0001 C CNN
+	1    3000 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 1350 3000 1750
+Wire Wire Line
+	2900 1350 2900 1550
+Wire Wire Line
+	2900 1550 2500 1550
+Wire Wire Line
+	4300 3450 3300 3450
+Wire Wire Line
+	5400 5700 5500 5700
+Wire Wire Line
+	5500 5700 5500 5550
+Connection ~ 5400 5700
+Wire Wire Line
+	5500 5700 5700 5700
+Wire Wire Line
+	5700 5700 5700 5550
+Connection ~ 5500 5700
+Wire Wire Line
+	5700 5700 5800 5700
+Wire Wire Line
+	5800 5700 5800 5550
+Connection ~ 5700 5700
+Wire Wire Line
+	5400 3550 5500 3550
+Wire Wire Line
+	5500 3550 5500 3400
+Connection ~ 5400 3550
+Wire Wire Line
+	5500 3550 5700 3550
+Wire Wire Line
+	5700 3550 5700 3400
+Connection ~ 5500 3550
+Wire Wire Line
+	5700 3550 5800 3550
+Wire Wire Line
+	5800 3550 5800 3400
+Connection ~ 5700 3550
+Wire Wire Line
+	8450 4400 8450 4450
+Wire Wire Line
+	8450 4450 8550 4450
+Connection ~ 8550 4450
+NoConn ~ 8950 2800
+NoConn ~ 8950 2900
+NoConn ~ 8950 3200
+NoConn ~ 8950 3400
+NoConn ~ 8950 3500
+NoConn ~ 8950 3600
+NoConn ~ 8950 3700
+NoConn ~ 8950 3800
+NoConn ~ 8950 3900
+NoConn ~ 8950 4000
+NoConn ~ 8950 4100
+NoConn ~ 7950 4100
+NoConn ~ 7950 4000
+NoConn ~ 7950 2900
+NoConn ~ 7950 2800
+NoConn ~ 8350 2400
+NoConn ~ 8550 2400
 $EndSCHEMATC

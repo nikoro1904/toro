@@ -19,7 +19,7 @@ byte i2c_message = 0;   // byte for sending
 void setup() {
   // put your setup code here, to run once:
   I2C_0.begin(SDA_0, SCL_0, I2C_FREQ); // begin I2C bus
-  SerialBT.begin("ESP32");
+  SerialBT.begin("ESP32test");
   
   pinMode(LED, OUTPUT);
 }
@@ -29,7 +29,7 @@ void loop() {
 
   // recieve bluetooth message
   if(SerialBT.available()) {
-    bt_message = SerialBT.read(); // returns string
+    bt_message = SerialBT.read();
 
     i2c_message = bt_message;
 
