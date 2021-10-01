@@ -49,10 +49,6 @@ $EndComp
 Wire Wire Line
 	7950 3000 7400 3000
 Wire Wire Line
-	7400 3000 7400 2000
-Wire Wire Line
-	7400 2000 6100 2000
-Wire Wire Line
 	6100 2200 7300 2200
 Wire Wire Line
 	7300 2200 7300 3100
@@ -375,9 +371,14 @@ NoConn ~ 8950 3900
 NoConn ~ 8950 4000
 NoConn ~ 8950 4100
 NoConn ~ 7950 4100
-NoConn ~ 7950 4000
 NoConn ~ 7950 2900
 NoConn ~ 7950 2800
 NoConn ~ 8350 2400
 NoConn ~ 8550 2400
+Wire Wire Line
+	7950 4050 7500 4050
+Wire Wire Line
+	7500 4050 7500 2000
+Wire Wire Line
+	7500 2000 6100 2000
 $EndSCHEMATC
