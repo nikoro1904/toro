@@ -8,8 +8,11 @@
  - Arduino Nano
  - 2x L293B motor driver chip
  - Akku 20 V
+ - ESP32 (Bluetooth and I2C Communication)
 
 ## yet to come
- - MAX5035 switching voltage regulators
  - Raspberry PI + camera
- - ESP32
+
+## removed
+
+- MAX5035 switching voltage regulators 

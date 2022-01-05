@@ -24,7 +24,7 @@ const int FULLSTEP[4][4] = { {HIGH, HIGH, LOW, LOW },   // s = 0 / U
                              {HIGH, LOW, LOW, HIGH } }; // s = 4 / X
 
 volatile uint8_t dir = 0xFF;
-int interval = 15;
+volatile uint8_t interval = 10;
 int distance = 10;
 int rotation = 5;
 
@@ -45,43 +45,70 @@ void loop() {
   // put your main code here, to run repeatedly:
 
   switch (dir) {
-    case 0x00:
+    case 0x00:                                // drive backwards
       both_motors_on();
       drive_backwards(distance, interval);
       break;
-    case 0x01:
+    case 0x01:                                // turn front left
       both_motors_on();
       turn_front_left(rotation, interval);
       break;
-    case 0x02:
+    case 0x02:                                // turn front right
       both_motors_on();
       turn_front_right(rotation, interval);
       break;
-    case 0x03:
+    case 0x03:                                // drive forward
       both_motors_on();
       drive_forward(distance, interval);
       break;
-    case 0x04:
+    case 0x04:                                // rotate left
       both_motors_on();
       rotate_left(rotation, interval);
       break;
-    case 0x05:
+    case 0x05:                                // rotate right
       both_motors_on();
       rotate_right(rotation, interval);
-//    case 0x06:
-//      both_motors_on();
-//      drive_forward(distance, 2*interval/3);
-//      break;
-//    case 0x07:
-//      both_motors_on();
-//      turn_back_left(rotation, interval);
-//      break;
-//    case 0x08:
-//      both_motors_on();
-//      turn_back_right(rotation, interval);
-//      break;
-    default:
+    case 0x06:                                // drive fast forward
+      both_motors_on();
+      drive_forward(distance, 2*interval/3);
+      break;
+    case 0x07:                                // turn back left
+      both_motors_on();
+      turn_back_left(rotation, interval);
+      break;
+    case 0x08:                                // turn back right
+      both_motors_on();
+      turn_back_right(rotation, interval);
+      break;
+    case 0x10:
+      both_motors_on();
+      drive_backwards(distance, 2*interval/3);
+      break;
+    case 0xa0:
       both_motors_off();
+      interval = 3;
+      break;
+    case 0xa1:
+      both_motors_off();
+      interval = 5;
+      break;
+    case 0xa2:
+      both_motors_off();
+      interval = 10;
+      break;
+    case 0xa3:
+      both_motors_off();
+      interval = 15;
+      break;
+    case 0xa4:
+      both_motors_off();
+      interval = 20;
+      break;
+    case 0xa5:
+      both_motors_off();
+      interval = 25;
+    default:
+      both_motors_off();                      // off
   }
 }
 
@@ -193,6 +220,12 @@ void both_motors_on() {
 }
 
 void both_motors_off() {
+  for (int s = 0; s < 4; s++) {
+    for (int p = 0; p < 4; p++) {
+      digitalWrite(PIN_L[p], LOW); // L backwards
+      digitalWrite(PIN_R[p], LOW);  // R backwards
+    }
+  }
   digitalWrite(EN_L, LOW);
   digitalWrite(EN_R, LOW);
 }
