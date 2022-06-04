@@ -1,6 +1,6 @@
 # TORO
 
-TORO is the name of my Tennis bOll RObot.
+TORO is the name of my **T**ennis b**O**ll **RO**bot.
 
 ![toro_082021](https://user-images.githubusercontent.com/50230017/128640742-8539ee24-16e3-4453-8286-b54433ecb4b5.jpg)
 
