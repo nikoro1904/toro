@@ -1,4 +1,4 @@
-16919380122109390
+16921023746311350
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -75256,3 +75256,10 @@ varistor SIOV
 0
 2
 2
+esp32_devkit_v1_doit
+esp32_devkit_v1_doit
+ESPWROOM32, ESP32, 30 GPIOs version
+
+0
+30
+30
