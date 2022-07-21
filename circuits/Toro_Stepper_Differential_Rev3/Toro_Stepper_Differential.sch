@@ -14,17 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L MCU_Module:Arduino_Nano_v3.x A1
-U 1 1 60E9D74E
-P 9150 4150
-F 0 "A1" H 9150 3061 50  0000 C CNN
-F 1 "Arduino_Nano_v3.x" H 9150 2970 50  0000 C CNN
-F 2 "Module:Arduino_Nano" H 9150 4150 50  0001 C CIN
-F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 9150 4150 50  0001 C CNN
-	1    9150 4150
-	1    0    0    -1  
-$EndComp
-$Comp
 L Driver_Motor:L293 U1
 U 1 1 60EA028E
 P 6300 3350
@@ -160,7 +149,7 @@ Wire Wire Line
 Wire Wire Line
 	6400 2350 7350 2350
 Wire Wire Line
-	9350 2350 9350 3150
+	9350 2350 9350 3050
 Wire Wire Line
 	6400 4500 7350 4500
 Wire Wire Line
@@ -299,18 +288,12 @@ Connection ~ 9250 5200
 NoConn ~ 9650 3550
 NoConn ~ 9650 3650
 NoConn ~ 9650 3950
-NoConn ~ 9650 4150
-NoConn ~ 9650 4250
 NoConn ~ 9650 4350
 NoConn ~ 9650 4450
-NoConn ~ 9650 4550
-NoConn ~ 9650 4650
 NoConn ~ 9650 4750
 NoConn ~ 9650 4850
-NoConn ~ 8650 4850
 NoConn ~ 8650 3650
 NoConn ~ 8650 3550
-NoConn ~ 9050 3150
 NoConn ~ 9250 3150
 Wire Wire Line
 	8650 4750 8200 4750
@@ -369,7 +352,7 @@ U 1 1 62B5FA56
 P 4800 2050
 F 0 "C1" H 4915 2096 50  0000 L CNN
 F 1 "220nF" H 4915 2005 50  0000 L CNN
-F 2 "" H 4838 1900 50  0001 C CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 4838 1900 50  0001 C CNN
 F 3 "~" H 4800 2050 50  0001 C CNN
 	1    4800 2050
 	1    0    0    -1  
@@ -394,27 +377,10 @@ F 3 "" H 4800 2250 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4800 2250 4800 2200
-$Comp
-L Connector:Conn_01x01_Male J5
-U 1 1 62B9FD52
-P 8150 2600
-F 0 "J5" H 8258 2781 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 8258 2690 50  0000 C CNN
-F 2 "" H 8150 2600 50  0001 C CNN
-F 3 "~" H 8150 2600 50  0001 C CNN
-	1    8150 2600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8350 2600 8400 2600
 Wire Wire Line
 	8400 3750 8650 3750
 Wire Wire Line
-	8400 2600 8400 3750
-Wire Wire Line
-	1700 3650 1850 3650
-Wire Wire Line
-	1700 3750 2450 3750
+	1700 3750 1850 3750
 Wire Wire Line
 	1700 3850 3200 3850
 Wire Wire Line
@@ -424,41 +390,9 @@ Wire Wire Line
 Wire Wire Line
 	1700 4700 2400 4700
 Wire Wire Line
-	1700 4600 3200 4600
+	1700 4300 3200 4300
 Wire Wire Line
-	1700 4300 3800 4300
-$Comp
-L Device:D_Bridge_-AA+ D1
-U 1 1 629D2508
-P 2150 2850
-F 0 "D1" V 2196 2506 50  0000 R CNN
-F 1 "D_Bridge_-AA+" V 2105 2506 50  0000 R CNN
-F 2 "" H 2150 2850 50  0001 C CNN
-F 3 "~" H 2150 2850 50  0001 C CNN
-	1    2150 2850
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:D_Bridge_-AA+ D2
-U 1 1 629E9352
-P 3500 2900
-F 0 "D2" V 3546 2556 50  0000 R CNN
-F 1 "D_Bridge_-AA+" V 3455 2556 50  0000 R CNN
-F 2 "" H 3500 2900 50  0001 C CNN
-F 3 "~" H 3500 2900 50  0001 C CNN
-	1    3500 2900
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	1850 2850 1850 3650
-Connection ~ 1850 3650
-Wire Wire Line
-	1850 3650 4550 3650
-Wire Wire Line
-	2450 2850 2450 3750
-Connection ~ 2450 3750
-Wire Wire Line
-	2450 3750 4700 3750
+	2450 2850 2450 3650
 Wire Wire Line
 	3200 2900 3200 3850
 Connection ~ 3200 3850
@@ -469,17 +403,6 @@ Wire Wire Line
 Connection ~ 3800 4200
 Wire Wire Line
 	3800 4200 5000 4200
-$Comp
-L Device:D_Bridge_-AA+ D3
-U 1 1 629F80EF
-P 2100 5600
-F 0 "D3" V 2054 5944 50  0000 L CNN
-F 1 "D_Bridge_-AA+" V 2145 5944 50  0000 L CNN
-F 2 "" H 2100 5600 50  0001 C CNN
-F 3 "~" H 2100 5600 50  0001 C CNN
-	1    2100 5600
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	1800 5600 1800 4800
 Connection ~ 1800 4800
@@ -490,32 +413,13 @@ Wire Wire Line
 Connection ~ 2400 4700
 Wire Wire Line
 	2400 4700 4700 4700
+Wire Wire Line
+	3800 5600 3800 4600
 $Comp
-L Device:D_Bridge_-AA+ D4
-U 1 1 62A02125
-P 3500 5600
-F 0 "D4" V 3454 5944 50  0000 L CNN
-F 1 "D_Bridge_-AA+" V 3545 5944 50  0000 L CNN
-F 2 "" H 3500 5600 50  0001 C CNN
-F 3 "~" H 3500 5600 50  0001 C CNN
-	1    3500 5600
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	3200 5600 3200 4600
-Connection ~ 3200 4600
-Wire Wire Line
-	3200 4600 4800 4600
-Wire Wire Line
-	3800 5600 3800 4300
-Connection ~ 3800 4300
-Wire Wire Line
-	3800 4300 5000 4300
-$Comp
-L power:GND #PWR?
+L power:GND #PWR0101
 U 1 1 62A1E792
 P 2100 5900
-F 0 "#PWR?" H 2100 5650 50  0001 C CNN
+F 0 "#PWR0101" H 2100 5650 50  0001 C CNN
 F 1 "GND" H 2105 5727 50  0000 C CNN
 F 2 "" H 2100 5900 50  0001 C CNN
 F 3 "" H 2100 5900 50  0001 C CNN
@@ -523,10 +427,10 @@ F 3 "" H 2100 5900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0102
 U 1 1 62A1EBE5
 P 3500 5900
-F 0 "#PWR?" H 3500 5650 50  0001 C CNN
+F 0 "#PWR0102" H 3500 5650 50  0001 C CNN
 F 1 "GND" H 3505 5727 50  0000 C CNN
 F 2 "" H 3500 5900 50  0001 C CNN
 F 3 "" H 3500 5900 50  0001 C CNN
@@ -534,10 +438,10 @@ F 3 "" H 3500 5900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0103
 U 1 1 62A2315C
 P 2150 3150
-F 0 "#PWR?" H 2150 2900 50  0001 C CNN
+F 0 "#PWR0103" H 2150 2900 50  0001 C CNN
 F 1 "GND" H 2155 2977 50  0000 C CNN
 F 2 "" H 2150 3150 50  0001 C CNN
 F 3 "" H 2150 3150 50  0001 C CNN
@@ -545,10 +449,10 @@ F 3 "" H 2150 3150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0104
 U 1 1 62A24DC6
 P 3500 3200
-F 0 "#PWR?" H 3500 2950 50  0001 C CNN
+F 0 "#PWR0104" H 3500 2950 50  0001 C CNN
 F 1 "GND" H 3505 3027 50  0000 C CNN
 F 2 "" H 3500 3200 50  0001 C CNN
 F 3 "" H 3500 3200 50  0001 C CNN
@@ -556,10 +460,10 @@ F 3 "" H 3500 3200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+10V #PWR?
+L power:+10V #PWR0105
 U 1 1 62A26436
 P 2150 2550
-F 0 "#PWR?" H 2150 2400 50  0001 C CNN
+F 0 "#PWR0105" H 2150 2400 50  0001 C CNN
 F 1 "+10V" H 2165 2723 50  0000 C CNN
 F 2 "" H 2150 2550 50  0001 C CNN
 F 3 "" H 2150 2550 50  0001 C CNN
@@ -567,10 +471,10 @@ F 3 "" H 2150 2550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+10V #PWR?
+L power:+10V #PWR0106
 U 1 1 62A27E4A
 P 3500 2600
-F 0 "#PWR?" H 3500 2450 50  0001 C CNN
+F 0 "#PWR0106" H 3500 2450 50  0001 C CNN
 F 1 "+10V" H 3515 2773 50  0000 C CNN
 F 2 "" H 3500 2600 50  0001 C CNN
 F 3 "" H 3500 2600 50  0001 C CNN
@@ -578,10 +482,10 @@ F 3 "" H 3500 2600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+10V #PWR?
+L power:+10V #PWR0107
 U 1 1 62A2827B
 P 2100 5300
-F 0 "#PWR?" H 2100 5150 50  0001 C CNN
+F 0 "#PWR0107" H 2100 5150 50  0001 C CNN
 F 1 "+10V" H 2115 5473 50  0000 C CNN
 F 2 "" H 2100 5300 50  0001 C CNN
 F 3 "" H 2100 5300 50  0001 C CNN
@@ -589,14 +493,158 @@ F 3 "" H 2100 5300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+10V #PWR?
+L power:+10V #PWR0108
 U 1 1 62A2A893
 P 3500 5300
-F 0 "#PWR?" H 3500 5150 50  0001 C CNN
+F 0 "#PWR0108" H 3500 5150 50  0001 C CNN
 F 1 "+10V" H 3515 5473 50  0000 C CNN
 F 2 "" H 3500 5300 50  0001 C CNN
 F 3 "" H 3500 5300 50  0001 C CNN
 	1    3500 5300
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:D_Bridge_+-AA D2
+U 1 1 629CE77B
+P 2150 2850
+F 0 "D2" V 2196 3194 50  0000 L CNN
+F 1 "D_Bridge_+-AA" V 2105 3194 50  0000 L CNN
+F 2 "nikos_footprints:BridgeRectifier_+-AA" H 2150 2850 50  0001 C CNN
+F 3 "~" H 2150 2850 50  0001 C CNN
+	1    2150 2850
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:D_Bridge_+-AA D3
+U 1 1 629D7631
+P 3500 2900
+F 0 "D3" V 3546 3244 50  0000 L CNN
+F 1 "D_Bridge_+-AA" V 3455 3244 50  0000 L CNN
+F 2 "nikos_footprints:BridgeRectifier_+-AA" H 3500 2900 50  0001 C CNN
+F 3 "~" H 3500 2900 50  0001 C CNN
+	1    3500 2900
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:D_Bridge_+-AA D1
+U 1 1 629DAA97
+P 2100 5600
+F 0 "D1" V 2146 5944 50  0000 L CNN
+F 1 "D_Bridge_+-AA" V 2055 5944 50  0000 L CNN
+F 2 "nikos_footprints:BridgeRectifier_+-AA" H 2100 5600 50  0001 C CNN
+F 3 "~" H 2100 5600 50  0001 C CNN
+	1    2100 5600
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:D_Bridge_+-AA D4
+U 1 1 629DBE62
+P 3500 5600
+F 0 "D4" V 3546 5944 50  0000 L CNN
+F 1 "D_Bridge_+-AA" V 3455 5944 50  0000 L CNN
+F 2 "nikos_footprints:BridgeRectifier_+-AA" H 3500 5600 50  0001 C CNN
+F 3 "~" H 3500 5600 50  0001 C CNN
+	1    3500 5600
+	0    1    -1   0   
+$EndComp
+Connection ~ 3200 4300
+Wire Wire Line
+	1700 4600 3800 4600
+Wire Wire Line
+	3200 4300 3200 5600
+Connection ~ 3800 4600
+Wire Wire Line
+	3800 4600 4800 4600
+Wire Wire Line
+	3200 4300 5000 4300
+Connection ~ 1850 3750
+Connection ~ 2450 3650
+Wire Wire Line
+	2450 3650 4550 3650
+Wire Wire Line
+	1850 3750 4700 3750
+Wire Wire Line
+	1700 3650 2450 3650
+Wire Wire Line
+	1850 2850 1850 3750
+$Comp
+L MCU_Module:Arduino_Nano_v3.x A1
+U 1 1 60E9D74E
+P 9150 4150
+F 0 "A1" H 9150 3061 50  0000 C CNN
+F 1 "Arduino_Nano_v3.x" H 9150 2970 50  0000 C CNN
+F 2 "Module:Arduino_Nano" H 9150 4150 50  0001 C CIN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 9150 4150 50  0001 C CNN
+	1    9150 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x09_Male J5
+U 1 1 629FBC36
+P 10650 4050
+F 0 "J5" H 10622 3982 50  0000 R CNN
+F 1 "Conn_01x09_Male" H 10622 4073 50  0000 R CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x09_P2.54mm_Vertical" H 10650 4050 50  0001 C CNN
+F 3 "~" H 10650 4050 50  0001 C CNN
+	1    10650 4050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8650 4850 8200 4850
+Wire Wire Line
+	8200 4850 8200 5900
+Wire Wire Line
+	8200 5900 10450 5900
+Wire Wire Line
+	10450 5900 10450 4450
+Wire Wire Line
+	9650 4150 10000 4150
+Wire Wire Line
+	10000 4150 10000 4350
+Wire Wire Line
+	10000 4350 10450 4350
+Wire Wire Line
+	9650 4250 10450 4250
+Wire Wire Line
+	9650 4550 10100 4550
+Wire Wire Line
+	10100 4550 10100 4150
+Wire Wire Line
+	10100 4150 10450 4150
+Wire Wire Line
+	9650 4650 10200 4650
+Wire Wire Line
+	10200 4650 10200 4050
+Wire Wire Line
+	10200 4050 10450 4050
+Wire Wire Line
+	9350 3050 10200 3050
+Wire Wire Line
+	10200 3050 10200 3950
+Wire Wire Line
+	10200 3950 10450 3950
+Connection ~ 9350 3050
+Wire Wire Line
+	9350 3050 9350 3150
+Wire Wire Line
+	9850 5200 10300 5200
+Wire Wire Line
+	10300 5200 10300 3850
+Wire Wire Line
+	10300 3850 10450 3850
+Connection ~ 9850 5200
+Wire Wire Line
+	9050 3150 9050 2950
+Wire Wire Line
+	9050 2950 10300 2950
+Wire Wire Line
+	10300 2950 10300 3750
+Wire Wire Line
+	10300 3750 10450 3750
+Wire Wire Line
+	8400 2850 10450 2850
+Wire Wire Line
+	10450 2850 10450 3650
+Wire Wire Line
+	8400 2850 8400 3750
 $EndSCHEMATC

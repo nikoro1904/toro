@@ -8,3 +8,7 @@ Die Motor-Treiber (L293B) können irgendwie nicht mit dem 12V-Schaltregler (MAX5
 
 Die Motor-Treiber-Platine hat irgendwo einen Wackelkontakt.
 Manchmal drehen die Motoren nicht sauber, dann hilft es, einmal die Platine zu lüpfen und wieder fallen zu lassen.
+
+## 21.07.2022
+
+Beim Betrieb ruckelt/oszilliert einer der Motoren manchmal, aber nur bei bestimmten Modi (rotate left oder rotate right).

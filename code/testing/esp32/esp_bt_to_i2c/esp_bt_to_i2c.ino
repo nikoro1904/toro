@@ -29,6 +29,7 @@ void loop() {
 
   // recieve bluetooth message
   if(SerialBT.available()) {
+    digitalWrite(LED, HIGH);
     bt_message = SerialBT.read();
 
     i2c_message = bt_message;
@@ -39,4 +40,5 @@ void loop() {
     I2C_0.endTransmission();
   }
   delay(10);
+  digitalWrite(LED, LOW);
 }
