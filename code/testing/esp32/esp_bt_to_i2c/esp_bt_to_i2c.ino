@@ -32,6 +32,10 @@ void loop() {
     digitalWrite(LED, HIGH);
     bt_message = SerialBT.read();
 
+    if (bt_message == 0xfd) {
+      SerialBT.println("esp32 is alive");
+    }
+
     i2c_message = bt_message;
 
     // send i2c_message to the slave
