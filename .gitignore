@@ -1,5 +1,5 @@
 # virtualenv
-.venv_toro/
+code/testing/raspi/.venv_toro/
 
 # Prerequisites
 *.d
