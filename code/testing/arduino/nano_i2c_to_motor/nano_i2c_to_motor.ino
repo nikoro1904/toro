@@ -111,6 +111,10 @@ void loop() {
     case 0xa5:
       both_motors_off();
       interval = 25;
+    case 0xfd:  // msg 0xfd is reserved for esp32-master communication
+      break;
+    case 0xfe:  // msg 0xfe is reserved for esp32-master communication
+      break;
     case 0xff:
       both_motors_off();                      // off
     default:
