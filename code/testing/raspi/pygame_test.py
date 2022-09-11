@@ -55,7 +55,7 @@ class App():
     def __init__(self):
         self._screen = None
         self._running = False
-        self.size = (self.width, self.height) = (600, 400)
+        self.size = (self.width, self.height) = (300, 300)
     
     def on_init(self):
         pygame.init()
@@ -77,7 +77,11 @@ class App():
         self.down_key.draw(self._screen)
 
         pygame.display.flip()
-        print("on_init: " + str(type(self._screen)))
+
+        # init I2C bus
+        self.i2cbus = SMBus(1)
+        self.i2caddress = 0x04
+
 
     def on_event(self, event):
         if event.type == pygame.QUIT:
@@ -86,35 +90,43 @@ class App():
             if event.key == pygame.K_LEFT:
                 self.left_key.activate()
                 self.left_key.draw(self._screen)
+                self.i2cbus.write_byte(self.i2caddress, int("04", 16))
                 #print("left_key down")
             elif event.key == pygame.K_RIGHT:
                 self.right_key.activate()
                 self.right_key.draw(self._screen)
+                self.i2cbus.write_byte(self.i2caddress, int("05", 16))
                 #print("right_key down")
             elif event.key == pygame.K_UP:
                 self.up_key.activate()
                 self.up_key.draw(self._screen)
+                self.i2cbus.write_byte(self.i2caddress, int("03", 16))
                 #print("up_key down")
             elif event.key == pygame.K_DOWN:
                 self.down_key.activate()
                 self.down_key.draw(self._screen)
+                self.i2cbus.write_byte(self.i2caddress, int("00", 16))
                 #print("down_key down")
         elif event.type == pygame.KEYUP:
             if event.key == pygame.K_LEFT:
                 self.left_key.deactivate()
                 self.left_key.draw(self._screen)
+                self.i2cbus.write_byte(self.i2caddress, int("ff", 16))
                 #print("left_key up")
             elif event.key == pygame.K_RIGHT:
                 self.right_key.deactivate()
                 self.right_key.draw(self._screen)
+                self.i2cbus.write_byte(self.i2caddress, int("ff", 16))
                 #print("right_key up")
             elif event.key == pygame.K_UP:
                 self.up_key.deactivate()
                 self.up_key.draw(self._screen)
+                self.i2cbus.write_byte(self.i2caddress, int("ff", 16))
                 #print("up_key up")
             elif event.key == pygame.K_DOWN:
                 self.down_key.deactivate()
                 self.down_key.draw(self._screen)
+                self.i2cbus.write_byte(self.i2caddress, int("ff", 16))
                 #print("down_key up")
 
     def on_render(self):
@@ -127,6 +139,8 @@ class App():
             for event in pygame.event.get():
                 self.on_event(event)
             self.on_render()
+
+
         pygame.quit()
         
 if __name__ == "__main__":
