@@ -44,8 +44,9 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
 
+
   switch (dir) {
-    case 0x00:                                // drive backwards
+    case 0x00:    // drive backwards
       both_motors_on();
       drive_backwards(distance, interval);
       break;
