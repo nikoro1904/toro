@@ -109,5 +109,5 @@ void serialEvent() {
   while(Serial.available() > 0) {
     dir = Serial.read();
   }
-  Serial.println(dir);
+  Serial.write(dir);
 }
