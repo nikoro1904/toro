@@ -2,7 +2,7 @@
 #! /usr/bin/python3
 
 """
-This program should initialise all hardware modules connected to toro 
+The init_all function initialises all hardware modules connected to toro and returns them in a dict
 """
 
 from serial import Serial, SerialTimeoutException
@@ -40,21 +40,26 @@ def init_single_serial(device, baudrate, question, expected_response, timeout=1,
             temp_connection.close()
             return 0
 
-def main():
-    print("------------------------------------------")
-    print("Module: motor driver")
-    print("Connected via: USB cable to Arduino")
-    print("Communication protocol: Serial, 115200 Baud/s")
+def init_motor_driver(verbose=False):
+    motor_driver = dict()
 
+    if (verbose):
+        print("------------------------------------------")
+        print("Module: motor driver")
+        print("Connected via: USB cable to Arduino")
+        print("Communication protocol: Serial, 115200 Baud/s")
 
     for port in comports(include_links=False):
         success = init_single_serial(port.device,baudrate=115200, question=b'\xfd', expected_response=b'\x41')
         if success:
-            print("Motor driver found at " + port.device)
+            if(verbose): print("Motor driver found at " + port.device)
+            motor_driver = Serial(port.device, baudrate=115200, timeout=1, write_timeout=1)
+            sleep(0.1)
             break
     if (success != 1):                                                                                              
-        print("E: Could not connect to motor driver module")
-    print("------------------------------------------")
+        if(verbose): print("E: Could not connect to motor driver module")
+    
+    if (verbose):
+        print("------------------------------------------")
 
-if __name__ == "__main__":
-    main()
+    return motor_driver
