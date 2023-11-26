@@ -94,7 +94,12 @@ void loop() {
     case 0xa5:
       both_motors_off();
       interval = 25;
-    case 0xfd:  // msg 0xfd is reserved for esp32-master communication
+    case 0xfd:  // handshake for master communication
+      Serial.write(0x41);
+      digitalWrite(LED_BUILTIN, HIGH);
+      delay(200);
+      digitalWrite(LED_BUILTIN, LOW);
+      dir = 0xff;
       break;
     case 0xfe:  // msg 0xfe is reserved for esp32-master communication
       break;
